@@ -1,9 +1,14 @@
+import { Header } from "./components/header/header";
+import { Post } from "./components/Post/Post";
+import { Profile } from "./components/profile/profile";
 import GlobalStyles from "./styles/global";
 
 export function App() {
   return (
     <>
-      <h1>Hello World</h1>;<img src="https://i.pravatar.cc/150"></img>
+      <Header />
+      <Post />
+      <Profile />
       <GlobalStyles />
     </>
   );

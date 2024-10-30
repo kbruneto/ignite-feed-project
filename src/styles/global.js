@@ -17,4 +17,21 @@ export default createGlobalStyle`
     h1{
         color: ${theme.colors.text};
     }
+
+    body, input, button, select{
+        font: 1rem 'Roboto', sans-serif;
+    }
+
+    h1, h2, p, span, strong, button, label, input {
+        line-height: 100%,
+    }
+
+    #root{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    button {
+        cursor: pointer;
+    }
 `;
