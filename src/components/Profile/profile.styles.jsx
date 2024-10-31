@@ -11,26 +11,32 @@ export const PrincipalContainer = styled.div`
   left: 160px; // 160px, pois ainda não há o container dos posts, e não vi outra maneira de alinhar a não ser essa. Pretendo mudar futuramente, para que haja uma melhor responsividade.
 `;
 
-export const TextName = styled.p`
-  color: ${theme.colors.text};
-  font-size: 16px;
-  text-align: center;
-  font-weight: 700;
+export const ContainerNameDesc = styled.div`
   position: absolute;
   top: 116px;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+  width: 85%;
+  max-width: 256px;
+  word-wrap: break-word;
+  gap: 5px;
+`;
+
+export const TextName = styled.p`
+  color: ${theme.colors.text};
+  font-size: 16px;
+  font-weight: 700;
 `;
 
 export const DescriptionPeople = styled.p`
   color: ${theme.colors.darkText};
   font-size: 14px;
-  text-align: center;
   font-weight: 400;
-  position: absolute;
-  top: 142px;
-  left: 50%;
-  transform: translateX(-50%);
 `;
 
 export const BannerImage = styled.img`
@@ -52,6 +58,7 @@ export const ProfileImage = styled.img`
   border: 2px solid;
   border-color: ${theme.colors.primary};
   background-color: ${theme.colors.dark};
+  margin-bottom: 16px;
 `;
 
 export const ButtonStyle = styled.button`
@@ -59,7 +66,8 @@ export const ButtonStyle = styled.button`
   height: 50px;
   position: absolute;
   top: 212px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 16px 24px 14px 24px;
   border-radius: 8px;
   border: 1px solid;
@@ -76,10 +84,8 @@ export const ButtonStyle = styled.button`
 `;
 
 export const HorizontalLine = styled.div`
-  width: 100%;
+  width: 117.5%;
   height: 1px;
   background-color: ${theme.colors.lineColor};
-  margin: 24px 0;
-  position: absolute;
-  top: 150px;
+  margin-top: 20px; /* Aumenta o espaço entre o texto e a linha */
 `;

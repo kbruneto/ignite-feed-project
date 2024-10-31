@@ -5,6 +5,7 @@ import {
   BannerImage,
   ButtonStyle,
   PrincipalContainer,
+  ContainerNameDesc,
   HorizontalLine,
 } from "./profile.styles";
 import BannerPlants from "../../assets/banner-plants.svg";
@@ -18,9 +19,11 @@ export function Profile() {
         src="https://i.pravatar.cc/1000?img=32"
         alt="Imagem de perfil de Leslie Alexander"
       />
-      <TextName>Leslie Alexander</TextName>
-      <DescriptionPeople>UI Designer</DescriptionPeople>
-      <HorizontalLine />
+      <ContainerNameDesc>
+        <TextName>Leslie Alexander</TextName>
+        <DescriptionPeople>UI Designer</DescriptionPeople>
+        <HorizontalLine></HorizontalLine>
+      </ContainerNameDesc>
       <ButtonStyle>
         <img src={PencilVector} alt="Ícone de lápis" />
         Editar seu perfil
