@@ -5,5 +5,7 @@ export const theme = {
     dark: "#202024",
     black: "#121214",
     text: "#E1E1E6",
+    darkText: "#8D8D99",
+    lineColor: "#323238",
   },
 };
