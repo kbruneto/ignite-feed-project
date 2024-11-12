@@ -7,8 +7,6 @@ export const PrincipalContainer = styled.div`
   height: 294px;
   border-radius: 8px;
   position: relative;
-  top: 32px;
-  left: 160px; // 160px, pois ainda não há o container dos posts, e não vi outra maneira de alinhar a não ser essa. Pretendo mudar futuramente, para que haja uma melhor responsividade.
 `;
 
 export const ContainerNameDesc = styled.div`
@@ -50,7 +48,7 @@ export const ProfileImage = styled.img`
   width: 50px;
   height: 50px;
   position: relative;
-  padding: 2px;
+  padding: 3px;
   top: 45px;
   left: 50%;
   transform: translateX(-50%);
