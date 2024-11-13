@@ -1,12 +1,13 @@
 import { styled } from "styled-components";
 import { theme } from "../../styles/theme";
+import { PersonImage } from "../PersonImage";
 
 export const PrincipalContainer = styled.div`
   background-color: ${theme.colors.dark};
   width: 256px;
   height: 294px;
   border-radius: 8px;
-  position: relative;
+  display: flex;
 `;
 
 export const ContainerNameDesc = styled.div`
@@ -38,25 +39,17 @@ export const DescriptionPeople = styled.p`
 `;
 
 export const BannerImage = styled.img`
-  position: absolute;
-  width: 256px;
+  // position: absolute;
+  width: 100%;
   height: 72px;
   border-radius: 8px 8px 0 0;
 `;
 
-export const ProfileImage = styled.img`
-  width: 50px;
-  height: 50px;
+export const ProfileImage = styled(PersonImage)`
   position: relative;
-  padding: 3px;
   top: 45px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 8px;
-  border: 2px solid;
-  border-color: ${theme.colors.primary};
-  background-color: ${theme.colors.dark};
-  margin-bottom: 16px;
 `;
 
 export const ButtonStyle = styled.button`
