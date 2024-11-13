@@ -7,11 +7,11 @@ export const ContainerMain = styled.div`
   height: 621px;
   border-radius: 8px;
   background-color: ${theme.colors.dark};
+  display: flex;
+  padding: 40px;
 `;
 
 export const PostImage = styled(PersonImage)`
-  top: 0;
-  left: 0;
   transform: none;
   margin: 0;
 `;

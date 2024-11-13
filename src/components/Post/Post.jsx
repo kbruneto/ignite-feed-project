@@ -17,7 +17,8 @@ export function Post() {
             alt="Imagem de perfil de Jane Cooper"
           />
           <p>Jane Cooper</p>
-          <p>Dev Front-End</p>s<p>Publicado há 1h</p>
+          <p>Dev Front-End</p>
+          <p>Publicado há 1h</p>
         </Person>
 
         <Publication></Publication>
