@@ -4,10 +4,13 @@ import { PersonImage } from "../PersonImage";
 
 export const PrincipalContainer = styled.div`
   background-color: ${theme.colors.dark};
-  width: 256px;
-  height: 294px;
+  max-width: 256px;
+  max-height: 294px;
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ContainerNameDesc = styled.div`
@@ -38,25 +41,24 @@ export const DescriptionPeople = styled.p`
   font-weight: 400;
 `;
 
-export const BannerImage = styled.img`
-  // position: absolute;
-  width: 100%;
-  height: 72px;
-  border-radius: 8px 8px 0 0;
-`;
-
 export const ProfileImage = styled(PersonImage)`
   position: relative;
-  top: 45px;
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
+`;
+
+export const BannerImage = styled.img`
+  width: 100%;
+  min-height: 72px;
+  border-radius: 8px 8px 0 0;
 `;
 
 export const ButtonStyle = styled.button`
   width: 192px;
   height: 50px;
   position: absolute;
-  top: 212px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   padding: 16px 24px 14px 24px;
@@ -78,5 +80,6 @@ export const HorizontalLine = styled.div`
   width: 117.5%;
   height: 1px;
   background-color: ${theme.colors.lineColor};
-  margin-top: 20px; /* Aumenta o espaço entre o texto e a linha */
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
