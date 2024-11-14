@@ -15,9 +15,11 @@ import {
   Specs,
   ContainerRight,
   TextPost,
+  PostButton,
+  InputPost,
 } from "./post.styles";
 
-export function Post() {
+export function Post({ name }) {
   return (
     <>
       <ContainerMain>
@@ -28,7 +30,7 @@ export function Post() {
               alt="Imagem de perfil de Jane Cooper"
             />
             <Specs>
-              <TextName>Jane Cooper</TextName>
+              <TextName>{name}</TextName>
               <DescriptionPeople>Dev Front-End</DescriptionPeople>
             </Specs>
           </ContainerLeft>
@@ -54,8 +56,8 @@ export function Post() {
 
         <Feedback>
           <TextName>Deixe seu feedback</TextName>
-          <input></input>
-          <button></button>
+          <InputPost placeholder="Escreva um comentário..."></InputPost>
+          <PostButton>Publicar</PostButton>
         </Feedback>
       </ContainerMain>
     </>

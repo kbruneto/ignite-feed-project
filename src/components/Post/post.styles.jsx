@@ -4,7 +4,7 @@ import { PersonImage } from "../../styles/PersonImage";
 
 export const ContainerMain = styled.div`
   width: 832px;
-  height: 621px;
+  min-height: 621px;
   border-radius: 8px;
   background-color: ${theme.colors.dark};
   display: flex;
@@ -70,4 +70,35 @@ export const Feedback = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+export const InputPost = styled.textarea`
+  width: 100%;
+  height: 96px;
+  background-color: ${theme.colors.black};
+  padding: 13px 16px;
+
+  color: ${theme.colors.textPostColor};
+  font-weight: 400;
+  font-size: 16px;
+
+  border-radius: 8px;
+  border: 1px ${theme.colors.primary} solid;
+  resize: none;
+
+  &::placeholder {
+    color: ${theme.colors.textPlaceHolder};
+    opacity: 0.6;
+  }
+`;
+
+export const PostButton = styled.button`
+  width: 108px;
+  height: 49px;
+  border: none;
+  border-radius: 8px;
+  background-color: ${theme.colors.buttonGreen};
+
+  color: #fff;
+  font-weight: 700;
 `;
