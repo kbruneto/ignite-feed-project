@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { theme } from "../../styles/theme";
-import { PersonImage } from "../PersonImage";
+import { PersonImage } from "../../styles/PersonImage";
 
 export const PrincipalContainer = styled.div`
   background-color: ${theme.colors.dark};
@@ -27,18 +27,6 @@ export const ContainerNameDesc = styled.div`
   max-width: 256px;
   word-wrap: break-word;
   gap: 5px;
-`;
-
-export const TextName = styled.p`
-  color: ${theme.colors.text};
-  font-size: 16px;
-  font-weight: 700;
-`;
-
-export const DescriptionPeople = styled.p`
-  color: ${theme.colors.darkText};
-  font-size: 14px;
-  font-weight: 400;
 `;
 
 export const ProfileImage = styled(PersonImage)`

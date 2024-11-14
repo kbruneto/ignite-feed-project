@@ -1,6 +1,4 @@
 import {
-  TextName,
-  DescriptionPeople,
   ProfileImage,
   BannerImage,
   ButtonStyle,
@@ -10,6 +8,7 @@ import {
 } from "./profile.styles";
 import BannerPlants from "../../assets/banner-plants.svg";
 import PencilVector from "../../assets/Pencil Vector.svg";
+import { TextName, DescriptionPeople } from "../../styles/texts";
 
 export function Profile() {
   return (

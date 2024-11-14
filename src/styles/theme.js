@@ -7,5 +7,6 @@ export const theme = {
     text: "#E1E1E6",
     darkText: "#8D8D99",
     lineColor: "#323238",
+    textPostColor: "#C4C4CC",
   },
 };

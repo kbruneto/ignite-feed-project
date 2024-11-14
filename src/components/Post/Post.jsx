@@ -1,10 +1,20 @@
 import {
+  DescriptionPeople,
+  StyledTextPost,
+  TextName,
+  TextSpan,
+} from "../../styles/texts";
+import {
   ContainerMain,
   Person,
   Publication,
   Line,
   Feedback,
   PostImage,
+  ContainerLeft,
+  Specs,
+  ContainerRight,
+  TextPost,
 } from "./post.styles";
 
 export function Post() {
@@ -12,18 +22,41 @@ export function Post() {
     <>
       <ContainerMain>
         <Person>
-          <PostImage
-            src="https://i.pravatar.cc/1000?img=35"
-            alt="Imagem de perfil de Jane Cooper"
-          />
-          <p>Jane Cooper</p>
-          <p>Dev Front-End</p>
-          <p>Publicado há 1h</p>
+          <ContainerLeft>
+            <PostImage
+              src="https://i.pravatar.cc/1000?img=35"
+              alt="Imagem de perfil de Jane Cooper"
+            />
+            <Specs>
+              <TextName>Jane Cooper</TextName>
+              <DescriptionPeople>Dev Front-End</DescriptionPeople>
+            </Specs>
+          </ContainerLeft>
+          <ContainerRight>
+            <DescriptionPeople>Publicado há 1h</DescriptionPeople>
+          </ContainerRight>
         </Person>
 
-        <Publication></Publication>
+        <Publication>
+          <TextPost>
+            <StyledTextPost> Fala galeraa 👋 </StyledTextPost>
+            <StyledTextPost>
+              Acabei de subir mais um projeto no meu portifa. É um projeto que
+              fiz para meu desenvolvimento na LM Tech. O nome do projeto é
+              Ignite Feed Project 🚀
+            </StyledTextPost>
+            <TextSpan>👉 jane.design/doctorcare </TextSpan>
+            <TextSpan> #novoprojeto #nlw #rocketseat </TextSpan>
+          </TextPost>
+        </Publication>
+
         <Line></Line>
-        <Feedback></Feedback>
+
+        <Feedback>
+          <TextName>Deixe seu feedback</TextName>
+          <input></input>
+          <button></button>
+        </Feedback>
       </ContainerMain>
     </>
   );
