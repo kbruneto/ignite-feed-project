@@ -4,6 +4,7 @@ import {
   TextName,
   TextSpan,
 } from "../../styles/texts";
+import { Coments } from "../Commentaries/Coments";
 import {
   ContainerMain,
   Person,
@@ -17,9 +18,12 @@ import {
   TextPost,
   PostButton,
   InputPost,
+  CommentSpace,
 } from "./post.styles";
 
-export function Post({ name }) {
+export function Post({ comments }) {
+  console.log(comments);
+
   return (
     <>
       <ContainerMain>
@@ -30,7 +34,7 @@ export function Post({ name }) {
               alt="Imagem de perfil de Jane Cooper"
             />
             <Specs>
-              <TextName>{name}</TextName>
+              <TextName>Lalala</TextName>
               <DescriptionPeople>Dev Front-End</DescriptionPeople>
             </Specs>
           </ContainerLeft>
@@ -59,6 +63,18 @@ export function Post({ name }) {
           <InputPost placeholder="Escreva um comentário..."></InputPost>
           <PostButton>Publicar</PostButton>
         </Feedback>
+
+        <CommentSpace>
+          {comments?.map((commentsParams, Key) => (
+            <Coments
+              Key={Key}
+              photo={commentsParams.photo}
+              name={commentsParams.name}
+              timing={commentsParams.timing}
+              text={commentsParams.text}
+            />
+          ))}
+        </CommentSpace>
       </ContainerMain>
     </>
   );

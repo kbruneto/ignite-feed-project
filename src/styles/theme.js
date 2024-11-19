@@ -10,5 +10,6 @@ export const theme = {
     textPostColor: "#C4C4CC",
     textPlaceHolder: "#7C7C8A",
     buttonGreen: "#00875F",
+    commentBackground: "#29292E",
   },
 };

@@ -102,3 +102,13 @@ export const PostButton = styled.button`
   color: #fff;
   font-weight: 700;
 `;
+
+export const CommentSpace = styled.div`
+  width: 100%;
+  height: auto;
+  gap: 24px;
+  display: flex;
+  margin-top: 32px;
+  flex-direction: column;
+  justify-content: space-between;
+`;

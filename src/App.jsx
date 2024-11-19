@@ -1,4 +1,5 @@
 import { Post } from "./components/Post/Post";
+import { comments } from "./components/Post/comentsData";
 import { Profile } from "./components/Profile/Profile";
 import { ProfilePostContainer } from "./components/ProfilePostContainer";
 import { Header } from "./components/header/header";
@@ -12,7 +13,7 @@ export function App() {
         <Profile />
         <ContainerPosts>
           <Post name="Janaina" />
-          <Post name="Gabriel" />
+          <Post name="Gabriel" comments={comments} />
         </ContainerPosts>
       </ProfilePostContainer>
       <GlobalStyles />
