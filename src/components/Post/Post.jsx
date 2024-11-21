@@ -21,38 +21,43 @@ import {
   CommentSpace,
 } from "./post.styles";
 
-export function Post({ comments }) {
-  console.log(comments);
-
+export function Post({
+  comments: commentsIds,
+  photo,
+  name,
+  description,
+  timing,
+  apresentation,
+  text,
+  link,
+  linkSpan,
+  hashtags,
+}) {
   return (
     <>
       <ContainerMain>
         <Person>
           <ContainerLeft>
-            <PostImage
-              src="https://i.pravatar.cc/1000?img=35"
-              alt="Imagem de perfil de Jane Cooper"
-            />
+            <PostImage src={photo} alt="Imagem de perfil de Jane Cooper" />
             <Specs>
-              <TextName>Lalala</TextName>
-              <DescriptionPeople>Dev Front-End</DescriptionPeople>
+              <TextName>{name}</TextName>
+              <DescriptionPeople>{description}</DescriptionPeople>
             </Specs>
           </ContainerLeft>
           <ContainerRight>
-            <DescriptionPeople>Publicado há 1h</DescriptionPeople>
+            <DescriptionPeople>Publicado há {timing}h</DescriptionPeople>
           </ContainerRight>
         </Person>
 
         <Publication>
           <TextPost>
-            <StyledTextPost> Fala galeraa 👋 </StyledTextPost>
+            <StyledTextPost> {apresentation} </StyledTextPost>
+            <StyledTextPost>{text}</StyledTextPost>
             <StyledTextPost>
-              Acabei de subir mais um projeto no meu portifa. É um projeto que
-              fiz para meu desenvolvimento na LM Tech. O nome do projeto é
-              Ignite Feed Project 🚀
+              {link}
+              <TextSpan>{linkSpan}</TextSpan>
             </StyledTextPost>
-            <TextSpan>👉 jane.design/doctorcare </TextSpan>
-            <TextSpan> #novoprojeto #nlw #rocketseat </TextSpan>
+            <TextSpan> {hashtags} </TextSpan>
           </TextPost>
         </Publication>
 
@@ -65,9 +70,9 @@ export function Post({ comments }) {
         </Feedback>
 
         <CommentSpace>
-          {comments?.map((commentsParams, Key) => (
+          {commentsIds?.map((commentsParams) => (
             <Coments
-              Key={Key}
+              key={commentsParams.id}
               photo={commentsParams.photo}
               name={commentsParams.name}
               timing={commentsParams.timing}

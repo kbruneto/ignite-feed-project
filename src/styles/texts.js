@@ -18,6 +18,7 @@ export const TextSpan = styled.p`
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
+  display: inline;
 `;
 
 export const StyledTextPost = styled.p`
@@ -25,4 +26,5 @@ export const StyledTextPost = styled.p`
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
+  display: inline;
 `;

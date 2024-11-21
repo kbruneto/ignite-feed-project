@@ -1,5 +1,5 @@
 import { Post } from "./components/Post/Post";
-import { comments } from "./components/Post/comentsData";
+import { postArray } from "./components/Post/postsData";
 import { Profile } from "./components/Profile/Profile";
 import { ProfilePostContainer } from "./components/ProfilePostContainer";
 import { Header } from "./components/header/header";
@@ -12,8 +12,9 @@ export function App() {
       <ProfilePostContainer>
         <Profile />
         <ContainerPosts>
-          <Post name="Janaina" />
-          <Post name="Gabriel" comments={comments} />
+          {postArray?.map((post) => (
+            <Post key={post.id} {...post} />
+          ))}
         </ContainerPosts>
       </ProfilePostContainer>
       <GlobalStyles />
