@@ -21,7 +21,7 @@ import {
   CommentSpace,
 } from "./post.styles";
 
-export function Post({ comments: commentsIds, post }) {
+export function Post({ post }) {
   return (
     <>
       <ContainerMain>
@@ -59,7 +59,7 @@ export function Post({ comments: commentsIds, post }) {
         </Feedback>
 
         <CommentSpace>
-          {commentsIds?.map((commentsParams) => (
+          {post.comments?.map((commentsParams) => (
             <Coments
               key={commentsParams.id}
               photo={commentsParams.photo}
