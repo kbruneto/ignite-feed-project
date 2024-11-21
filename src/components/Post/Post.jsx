@@ -21,43 +21,32 @@ import {
   CommentSpace,
 } from "./post.styles";
 
-export function Post({
-  comments: commentsIds,
-  photo,
-  name,
-  description,
-  timing,
-  apresentation,
-  text,
-  link,
-  linkSpan,
-  hashtags,
-}) {
+export function Post({ comments: commentsIds, post }) {
   return (
     <>
       <ContainerMain>
         <Person>
           <ContainerLeft>
-            <PostImage src={photo} alt="Imagem de perfil de Jane Cooper" />
+            <PostImage src={post.photo} alt="Imagem de perfil de Jane Cooper" />
             <Specs>
-              <TextName>{name}</TextName>
-              <DescriptionPeople>{description}</DescriptionPeople>
+              <TextName>{post.name}</TextName>
+              <DescriptionPeople>{post.description}</DescriptionPeople>
             </Specs>
           </ContainerLeft>
           <ContainerRight>
-            <DescriptionPeople>Publicado há {timing}h</DescriptionPeople>
+            <DescriptionPeople>Publicado há {post.timing}h</DescriptionPeople>
           </ContainerRight>
         </Person>
 
         <Publication>
           <TextPost>
-            <StyledTextPost> {apresentation} </StyledTextPost>
-            <StyledTextPost>{text}</StyledTextPost>
+            <StyledTextPost> {post.apresentation} </StyledTextPost>
+            <StyledTextPost>{post.text}</StyledTextPost>
             <StyledTextPost>
-              {link}
-              <TextSpan>{linkSpan}</TextSpan>
+              {post.link}
+              <TextSpan>{post.linkSpan}</TextSpan>
             </StyledTextPost>
-            <TextSpan> {hashtags} </TextSpan>
+            <TextSpan> {post.hashtags} </TextSpan>
           </TextPost>
         </Publication>
 

@@ -13,7 +13,7 @@ export function App() {
         <Profile />
         <ContainerPosts>
           {postArray?.map((post) => (
-            <Post key={post.id} {...post} />
+            <Post key={post.id} post={post} />
           ))}
         </ContainerPosts>
       </ProfilePostContainer>
