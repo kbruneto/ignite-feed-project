@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 export default createGlobalStyle`
@@ -34,4 +34,10 @@ export default createGlobalStyle`
     button {
         cursor: pointer;
     }
+`;
+
+export const ContainerPosts = styled.div`
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
 `;
