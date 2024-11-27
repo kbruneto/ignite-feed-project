@@ -29,14 +29,14 @@ export function Post({ post }) {
   const [postComments, setPostComments] = useState(post.comments);
 
   const publicComment = () => {
-    const kkkkkkk = {
+    const newComment = {
       id: crypto.randomUUID(),
       photo: "https://i.pravatar.cc/1000?img=55",
       name: "Testando Muito",
       timing: "4",
       text: comment,
     };
-    setPostComments((curr) => [...curr, kkkkkkk]);
+    setPostComments((curr) => [...curr, newComment]);
     setComment("");
   };
 
