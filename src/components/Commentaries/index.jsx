@@ -13,12 +13,14 @@ import {
   DescriptionComents,
   StyledTextComents,
   LikeText,
-} from "./coments.styles";
+} from "./styles";
 
 import Like from "../../assets/Like.svg";
 import Lixeira from "../../assets/Lixeira.svg";
 
-export function Coments({ photo, name, timing, text }) {
+import PropTypes from "prop-types";
+
+export function Coments({ photo, name, timing, text, id, deleteComment }) {
   return (
     <>
       <Commentaries>
@@ -34,7 +36,11 @@ export function Coments({ photo, name, timing, text }) {
                 <DescriptionComents> Cerca de {timing}h </DescriptionComents>
               </ComTopLeft>
               <ComTopRight>
-                <img src={Lixeira} alt="Excluir comentário" />
+                <img
+                  src={Lixeira}
+                  alt="Excluir comentário"
+                  onClick={() => deleteComment(id)}
+                />
               </ComTopRight>
             </ComTop>
             <ComBottom>
@@ -50,3 +56,12 @@ export function Coments({ photo, name, timing, text }) {
     </>
   );
 }
+
+Coments.propTypes = {
+  photo: PropTypes.string,
+  name: PropTypes.string,
+  timing: PropTypes.string,
+  text: PropTypes.string,
+  deleteComment: PropTypes.func,
+  id: PropTypes.string,
+};

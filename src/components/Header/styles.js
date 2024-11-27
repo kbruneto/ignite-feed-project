@@ -9,7 +9,7 @@ export const TextHeader = styled.h1`
 
 export const HeaderBG = styled.div`
   height: 100px;
-  width: 100vw;
+  width: 100%;
   background-color: ${theme.colors.dark};
   display: flex;
   justify-content: center;

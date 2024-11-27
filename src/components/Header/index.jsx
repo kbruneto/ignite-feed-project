@@ -1,4 +1,4 @@
-import { TextHeader, HeaderBG, LogoImage } from "./header.styles";
+import { TextHeader, HeaderBG, LogoImage } from "./styles";
 import Logo from "../../assets/Ignite-simbol.svg";
 
 export function Header() {

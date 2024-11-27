@@ -5,7 +5,7 @@ import {
   PrincipalContainer,
   ContainerNameDesc,
   HorizontalLine,
-} from "./profile.styles";
+} from "./styles";
 import BannerPlants from "../../assets/banner-plants.svg";
 import PencilVector from "../../assets/Pencil Vector.svg";
 import { TextName, DescriptionPeople } from "../../styles/texts";

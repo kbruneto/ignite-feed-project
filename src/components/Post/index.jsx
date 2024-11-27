@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
+import { useState } from "react";
 import {
   DescriptionPeople,
   StyledTextPost,
   TextName,
   TextSpan,
 } from "../../styles/texts";
-import { Coments } from "../Commentaries/Coments";
+import { Coments } from "../Commentaries";
 import {
   ContainerMain,
   Person,
@@ -19,9 +21,41 @@ import {
   PostButton,
   InputPost,
   CommentSpace,
-} from "./post.styles";
+} from "./styles";
 
 export function Post({ post }) {
+  const [comment, setComment] = useState("");
+
+  const [postComments, setPostComments] = useState(post.comments);
+
+  const publicComment = () => {
+    const newComment = {
+      id: crypto.randomUUID(),
+      photo: "https://i.pravatar.cc/1000?img=55",
+      name: "Testando Muito",
+      timing: "4",
+      text: comment,
+    };
+    setPostComments((curr) => [...curr, newComment]);
+    setComment("");
+  };
+
+  const handleInputChange = (event) => {
+    setComment(event.target.value);
+  };
+
+  const deleteComment = (id) => {
+    var delIndex = postComments.findIndex((comment) => comment.id === id);
+
+    setPostComments((curr) => {
+      const delArray = [...curr];
+
+      delArray.splice(delIndex, 1);
+
+      return delArray;
+    });
+  };
+
   return (
     <>
       <ContainerMain>
@@ -54,18 +88,26 @@ export function Post({ post }) {
 
         <Feedback>
           <TextName>Deixe seu feedback</TextName>
-          <InputPost placeholder="Escreva um comentário..."></InputPost>
-          <PostButton>Publicar</PostButton>
+          <InputPost
+            placeholder="Escreva um comentário..."
+            value={comment}
+            onChange={handleInputChange}
+          ></InputPost>
+          {comment !== "" && (
+            <PostButton onClick={publicComment}>Publicar</PostButton>
+          )}
         </Feedback>
 
         <CommentSpace>
-          {post.comments?.map((commentsParams) => (
+          {postComments?.map((commentsParams) => (
             <Coments
               key={commentsParams.id}
+              id={commentsParams.id}
               photo={commentsParams.photo}
               name={commentsParams.name}
               timing={commentsParams.timing}
               text={commentsParams.text}
+              deleteComment={deleteComment}
             />
           ))}
         </CommentSpace>
@@ -73,3 +115,7 @@ export function Post({ post }) {
     </>
   );
 }
+
+Post.propTypes = {
+  post: PropTypes.any,
+};

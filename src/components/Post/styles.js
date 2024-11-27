@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "../../styles/theme";
 import { PersonImage } from "../../styles/PersonImage";
 
 export const ContainerMain = styled.div`
   width: 832px;
-  min-height: 621px;
+  min-height: 572px;
   border-radius: 8px;
   background-color: ${theme.colors.dark};
   display: flex;
@@ -66,7 +66,7 @@ export const Line = styled.div`
 
 export const Feedback = styled.div`
   width: 100%;
-  height: 206px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,18 +77,36 @@ export const InputPost = styled.textarea`
   height: 96px;
   background-color: ${theme.colors.black};
   padding: 13px 16px;
+  margin: 16px 0;
 
   color: ${theme.colors.textPostColor};
   font-weight: 400;
   font-size: 16px;
 
+  border: none;
   border-radius: 8px;
-  border: 1px ${theme.colors.primary} solid;
   resize: none;
+
+  transition: border 0.5s ease;
+
+  &:focus {
+    border: 1px ${theme.colors.primary} solid;
+  }
 
   &::placeholder {
     color: ${theme.colors.textPlaceHolder};
     opacity: 0.6;
+  }
+`;
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
 
@@ -101,6 +119,7 @@ export const PostButton = styled.button`
 
   color: #fff;
   font-weight: 700;
+  animation: ${fadeInUp} 0.5s ease;
 `;
 
 export const CommentSpace = styled.div`

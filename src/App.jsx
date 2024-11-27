@@ -1,9 +1,9 @@
-import { Post } from "./components/Post/Post";
+import { Post } from "./components/Post/";
 import { postArray } from "./components/Post/postsData";
-import { Profile } from "./components/Profile/Profile";
-import { ProfilePostContainer } from "./components/ProfilePostContainer";
-import { Header } from "./components/header/header";
+import { ProfilePostContainer } from "./ProfilePostContainer";
 import GlobalStyles, { ContainerPosts } from "./styles/global";
+import { Profile } from "./components/Profile";
+import { Header } from "./components/Header";
 
 export function App() {
   return (
