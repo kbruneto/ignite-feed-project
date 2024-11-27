@@ -5,6 +5,7 @@ export const ProfilePostContainer = styled.div`
   justify-content: center;
   gap: 32px;
   margin: 32px auto;
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     flex-direction: column;
